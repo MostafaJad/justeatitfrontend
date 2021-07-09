@@ -1,0 +1,683 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>app documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">app documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>PartnerDashboardComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/partner/partner-dashboard/partner-dashboard.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>partner-dashboard</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./partner-dashboard.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./partner-dashboard.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#orders">orders</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#acceptOrder">acceptOrder</a>
+                            </li>
+                            <li>
+                                <a href="#declineOrder">declineOrder</a>
+                            </li>
+                            <li>
+                                <a href="#getPartnerOrders">getPartnerOrders</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(httpClient: <a href="https://angular.io/api/common/http/HttpClient" target="_blank">HttpClient</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/components/partner/partner-dashboard/partner-dashboard.component.ts:11</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>httpClient</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/common/http/HttpClient" target="_blank" >HttpClient</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="acceptOrder"></a>
+                    <span class="name">
+                        <b>
+                            acceptOrder
+                        </b>
+                        <a href="#acceptOrder"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>acceptOrder(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="32"
+                            class="link-to-prism">src/app/components/partner/partner-dashboard/partner-dashboard.component.ts:32</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="declineOrder"></a>
+                    <span class="name">
+                        <b>
+                            declineOrder
+                        </b>
+                        <a href="#declineOrder"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>declineOrder(id: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="40"
+                            class="link-to-prism">src/app/components/partner/partner-dashboard/partner-dashboard.component.ts:40</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>id</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPartnerOrders"></a>
+                    <span class="name">
+                        <b>
+                            getPartnerOrders
+                        </b>
+                        <a href="#getPartnerOrders"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getPartnerOrders()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="18"
+                            class="link-to-prism">src/app/components/partner/partner-dashboard/partner-dashboard.component.ts:18</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="14"
+                            class="link-to-prism">src/app/components/partner/partner-dashboard/partner-dashboard.component.ts:14</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="orders"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            orders</b>
+                            <a href="#orders"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/Order.html" target="_self" >Order[]</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/components/partner/partner-dashboard/partner-dashboard.component.ts:11</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &quot;@angular/core&quot;;
+import { HttpClient } from &quot;@angular/common/http&quot;;
+import { Order } from &quot;src/app/models/order&quot;;
+
+@Component({
+  selector: &quot;partner-dashboard&quot;,
+  templateUrl: &quot;./partner-dashboard.component.html&quot;,
+  styleUrls: [&quot;./partner-dashboard.component.scss&quot;],
+})
+export class PartnerDashboardComponent implements OnInit {
+  public orders: Order[] &#x3D; [];
+  constructor(private httpClient: HttpClient) {}
+
+  ngOnInit() {
+    this.getPartnerOrders();
+  }
+
+  getPartnerOrders() {
+    this.httpClient
+      .get&lt;Order[]&gt;(
+        &#x60;http://localhost:3000/ordersByPartner/${localStorage.getItem(&quot;_id&quot;)}&#x60;
+      )
+      .subscribe((response) &#x3D;&gt; {
+        this.orders &#x3D; [];
+
+        response.forEach((order) &#x3D;&gt; {
+          this.orders.push(new Order(order));
+        });
+      });
+  }
+
+  acceptOrder(id: number) {
+    this.httpClient
+      .put(&#x60;http://localhost:3000/acceptOrder/${id}/&#x60;, {})
+      .subscribe((response) &#x3D;&gt; {
+        this.getPartnerOrders();
+      });
+  }
+
+  declineOrder(id: number) {
+    this.httpClient
+      .put(&#x60;http://localhost:3000/declineOrder/${id}/&#x60;, {})
+      .subscribe((response) &#x3D;&gt; {
+        this.getPartnerOrders();
+      });
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;h1&gt;Partner Orders&lt;/h1&gt;
+
+&lt;a href&#x3D;&quot;/partner/dishes&quot;&gt;&lt;button class&#x3D;&quot;btn btn-primary&quot;&gt;Dishes&lt;/button&gt;&lt;/a&gt;
+
+&lt;table class&#x3D;&quot;table table-striped mt-2&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th scope&#x3D;&quot;col&quot;&gt;#&lt;/th&gt;
+      &lt;th scope&#x3D;&quot;col&quot;&gt;Date&lt;/th&gt;
+      &lt;th scope&#x3D;&quot;col&quot;&gt;Customer Name&lt;/th&gt;
+      &lt;th scope&#x3D;&quot;col&quot;&gt;Customer Phone&lt;/th&gt;
+      &lt;th scope&#x3D;&quot;col&quot;&gt;Order Status&lt;/th&gt;
+      &lt;th scope&#x3D;&quot;col&quot;&gt;Order Total&lt;/th&gt;
+      &lt;th scope&#x3D;&quot;col&quot;&gt;Manage Order&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr *ngFor&#x3D;&quot;let order of orders&quot;&gt;
+      &lt;td&gt;{{ order._id }}&lt;/td&gt;
+      &lt;td&gt;{{ order.orderedAt | date: &quot;MMM dd, yyyy h:mm a&quot;  }}&lt;/td&gt;
+      &lt;td&gt;{{ order.customer.firstName }}&lt;/td&gt;
+      &lt;td&gt;{{ order.customer.phoneNumber }}&lt;/td&gt;
+      &lt;td&gt;{{ order.getStatusName() }}&lt;/td&gt;
+      &lt;td&gt;{{ order.getTotal() }} $&lt;/td&gt;
+      &lt;td&gt;
+        &lt;div *ngIf&#x3D;&quot;order.status &#x3D;&#x3D;&#x3D; 0&quot;&gt;
+          &lt;button class&#x3D;&quot;btn btn-success mr-2&quot; (click)&#x3D;&quot;acceptOrder(order._id)&quot;&gt;Accept&lt;/button&gt;
+          &lt;button class&#x3D;&quot;btn btn-danger&quot; (click)&#x3D;&quot;declineOrder(order._id)&quot;&gt;Decline&lt;/button&gt;
+        &lt;/div&gt;
+      &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./partner-dashboard.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><h1>Partner Orders</h1><a href="/partner/dishes"><button class="btn btn-primary">Dishes</button></a><table class="table table-striped mt-2">  <thead>    <tr>      <th scope="col">#</th>      <th scope="col">Date</th>      <th scope="col">Customer Name</th>      <th scope="col">Customer Phone</th>      <th scope="col">Order Status</th>      <th scope="col">Order Total</th>      <th scope="col">Manage Order</th>    </tr>  </thead>  <tbody>    <tr *ngFor="let order of orders">      <td>{{ order._id }}</td>      <td>{{ order.orderedAt | date: "MMM dd, yyyy h:mm a"  }}</td>      <td>{{ order.customer.firstName }}</td>      <td>{{ order.customer.phoneNumber }}</td>      <td>{{ order.getStatusName() }}</td>      <td>{{ order.getTotal() }} $</td>      <td>        <div *ngIf="order.status === 0">          <button class="btn btn-success mr-2" (click)="acceptOrder(order._id)">Accept</button>          <button class="btn btn-danger" (click)="declineOrder(order._id)">Decline</button>        </div>      </td>    </tr>  </tbody></table></div>'
+    var COMPONENTS = [{'name': 'AddDishComponent', 'selector': 'add-dish'},{'name': 'AdminCustomerComponent', 'selector': 'admin-customer'},{'name': 'AdminDashboardComponent', 'selector': 'app-admin-dashboard'},{'name': 'AdminPartnerComponent', 'selector': 'admin-partner'},{'name': 'AdminPartnerDishesComponent', 'selector': 'admin-partner-dishes'},{'name': 'AdminPartnersComponent', 'selector': 'admin-partners'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ChatFormComponent', 'selector': 'app-chat-form'},{'name': 'CreateOrderComponent', 'selector': ''},{'name': 'DishSearchComponent', 'selector': ''},{'name': 'EditDishComponent', 'selector': 'edit-dish'},{'name': 'HomeComponent', 'selector': ''},{'name': 'LoginComponent', 'selector': 'login-app'},{'name': 'MessageFormComponent', 'selector': 'app-message-form'},{'name': 'MessageItemComponent', 'selector': 'app-message-item'},{'name': 'MessageListComponent', 'selector': 'app-message-list'},{'name': 'MessageOfflineComponent', 'selector': 'message-offline'},{'name': 'OrderDetailsComponent', 'selector': ''},{'name': 'OrderHistoryComponent', 'selector': ''},{'name': 'PartnerDashboardComponent', 'selector': 'partner-dashboard'},{'name': 'PartnerDishesComponent', 'selector': 'partner-dishes'},{'name': 'ResponseHandlerComponent', 'selector': 'app-response-handler'},{'name': 'SignupComponent', 'selector': 'app-signup'},{'name': 'UserProfileComponent', 'selector': 'app-user-profile'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'PartnerDashboardComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'PartnerDashboardComponent.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

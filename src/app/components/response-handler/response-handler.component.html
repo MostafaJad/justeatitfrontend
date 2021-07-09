@@ -1,0 +1,7 @@
+<div class="alert alert-danger">
+  <li *ngFor="let e of errors">
+    <!-- format [{password: 'At least 3 in length'}, email: 'At least....'] - Won't have more than one key per entry -->
+    <span *ngIf="isString(e); else elseBlock"> {{ e }} </span>
+    <ng-template #elseBlock> {{ objectKeys(e)[0] }} - {{ e[objectKeys(e)[0]] }} </ng-template>
+  </li>
+</div>

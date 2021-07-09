@@ -1,0 +1,33 @@
+<h1>Partner Orders</h1>
+
+<a href="/partner/dishes"><button class="btn btn-primary">Dishes</button></a>
+
+<table class="table table-striped mt-2">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Date</th>
+      <th scope="col">Customer Name</th>
+      <th scope="col">Customer Phone</th>
+      <th scope="col">Order Status</th>
+      <th scope="col">Order Total</th>
+      <th scope="col">Manage Order</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of orders">
+      <td>{{ order._id }}</td>
+      <td>{{ order.orderedAt | date: "MMM dd, yyyy h:mm a"  }}</td>
+      <td>{{ order.customer.firstName }}</td>
+      <td>{{ order.customer.phoneNumber }}</td>
+      <td>{{ order.getStatusName() }}</td>
+      <td>{{ order.getTotal() }} $</td>
+      <td>
+        <div *ngIf="order.status === 0">
+          <button class="btn btn-success mr-2" (click)="acceptOrder(order._id)">Complete</button>
+          <button class="btn btn-danger" (click)="declineOrder(order._id)">Cancel</button>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

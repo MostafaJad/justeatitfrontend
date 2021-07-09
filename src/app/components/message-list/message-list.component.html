@@ -1,0 +1,6 @@
+<h1 class="text-center my-3">Chat</h1>
+<div class="chatlist">
+  <ul class="list-group">
+    <app-message-item *ngFor="let msg of messages" [message]="msg"></app-message-item>
+  </ul>
+</div>

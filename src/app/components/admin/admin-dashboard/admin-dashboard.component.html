@@ -1,0 +1,69 @@
+<div class="container">
+  <div class="row mb-2">
+    <div class="col-md-12">
+      <button type="button" class="btn btn-outline-primary" (click)="isCollapsed = !isCollapsed"
+        [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+        Data
+      </button>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-12">
+      <div id="collapseExample" [ngbCollapse]="isCollapsed">
+        <div class="card">
+          <div class="card-body">
+            <h3>Number of User: {{customers.length}}</h3>
+            <h3> Number of Orders: {{orders.length}}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mb-2">
+    <div class="col-md-12">
+      <button type="button" class="btn btn-outline-primary" (click)="isCollapsed2 = !isCollapsed2"
+        [attr.aria-expanded]="!isCollapsed2" aria-controls="collapseExample">
+        Dishes Data
+      </button>
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-12">
+      <div id="collapseExample2" [ngbCollapse]="isCollapsed2">
+        <div class="card">
+          <div class="card-body">
+            <h3>Number of Dishes: {{dishesAv.length}}</h3>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Image</th>
+                  <th scope="col">Quantity</th>
+                  <th scope="col">Partner Name</th>
+                  <th scope="col">Total Stock</th>
+                  <th scope="col">Price per unit</th>
+
+
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let dishes of dishesAv; index as i">
+                  <th scope="row">{{ i + 1 }}</th>
+                  <td>
+                    <img [src]=" dishes.dish.image " class="mr-2" style="width: 20px">
+                  <td>{{ dishes.dish.name  }}</td>
+                  <td>{{ dishes.dish.partner.companyName }}</td>
+                  <td>{{ dishes.quantityTotal | number }}</td>
+                  <td>{{ dishes.originalPrice | number }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

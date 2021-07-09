@@ -1,0 +1,44 @@
+<h1>Edit Dish</h1>
+
+<div class="container mt-3" *ngIf="errors.length > 0">
+  <div class="row justify-content-md-center">
+    <div class="col-md-12">
+      <app-response-handler [errors]="errors"></app-response-handler>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="form-group col-md-6">
+    <label>Name</label>
+    <input type="text" class="form-control" placeholder="Enter Dish Name" required [(ngModel)]="dish.name">
+  </div>
+  <div class="form-group col-md-6">
+    <label>Description</label>
+    <input type="text" class="form-control" placeholder="Enter Dish Description" required
+      [(ngModel)]="dish.description">
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <label>Image</label>
+      <input type="text" class="form-control" placeholder="Enter Image" [(ngModel)]="dish.image">
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <label for="type">Dish Type</label>
+    <div class="form-group">
+      <select class="form-control" required [(ngModel)]="selectedDishType" (change)="typeChanged($event)">
+        <option *ngFor="let dishType of dishTypes" [value]="dishType._id">{{ dishType.typeName }}</option>
+      </select>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <button type="submit" class="btn btn-primary" (click)="editDish()">Update Dish</button>
+    <a class="btn btn-danger ml-4" href="/partner/dishes">Cancel</a>
+  </div>
+</div>

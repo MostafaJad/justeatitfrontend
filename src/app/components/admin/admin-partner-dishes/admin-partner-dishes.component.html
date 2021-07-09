@@ -1,0 +1,27 @@
+<h1>Admin Partner Dishes</h1>
+
+<!-- <a href="/partner/addDish"><button class="btn btn-primary">Add Dish</button></a> -->
+
+<table class="table table-striped mt-2">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Type</th>
+      <!-- <th scope="col"></th> -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let dish of dishes">
+      <td>{{ dish._id }}</td>
+      <td>{{ dish.name }}</td>
+      <td>{{ dish.description }}</td>
+      <td>{{ dish.dishType.typeName }}</td>
+      <!-- <td>
+                <button class="btn btn-sm btn-success mr-2" (click)="editDish(dish._id)">Edit</button>
+                <button class="btn btn-sm btn-danger" (click)="deleteDish(dish._id)">Delete</button>
+            </td> -->
+    </tr>
+  </tbody>
+</table>

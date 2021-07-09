@@ -1,0 +1,46 @@
+<h1>Create Dish</h1>
+
+
+<div class="container mt-3" *ngIf="errors.length > 0">
+  <div class="row justify-content-md-center">
+    <div class="col-md-12">
+      <app-response-handler [errors]="errors"></app-response-handler>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="form-group col-md-6">
+    <label>Name</label>
+    <input type="text" class="form-control" placeholder="Enter Dish Name" required [(ngModel)]="newDish.name">
+  </div>
+  <div class="form-group col-md-6">
+    <label>Description</label>
+    <input type="text" class="form-control" placeholder="Enter Dish Description" required
+      [(ngModel)]="newDish.description">
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <label>Image</label>
+      <input type="text" class="form-control" placeholder="Enter Image" [(ngModel)]="newDish.image">
+    </div>
+  </div>
+  <div class="col-md-6">
+    <label for="type">Dish Type</label>
+    <div class="form-group">
+      <select id="dishType" class="form-control" required [(ngModel)]="selectedDishType">
+        <option *ngFor="let dishType of dishTypes" [ngValue]="dishType._id" [selected]="selectedDishType">
+          {{ dishType.typeName }}</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <button type="submit" class="btn btn-primary" (click)="createDish()">Create Dish</button>
+    <a class="btn btn-danger ml-4" href="/partner/dishes">Cancel</a>
+  </div>
+</div>

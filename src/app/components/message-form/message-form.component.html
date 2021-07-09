@@ -1,0 +1,7 @@
+<div class="chatcontrol">
+  <input type="text" class="form-control chatinput" (keyup.enter)="sendMessage()" [(ngModel)]="message.content" />
+  <button class="btn btn-success sendbtn" (click)="sendMessage()">Send</button>
+</div>
+<div class="my-4">
+  <a href='/message'>Click here</a> to send us an offline message!
+</div>

@@ -1,0 +1,82 @@
+<div class="row justify-content-center">
+
+  <div class="container mt-3" *ngIf="errors.length > 0">
+    <div class="row justify-content-md-center">
+      <div class="col-md-8">
+        <app-response-handler [errors]="errors"></app-response-handler>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-8 register-employee">
+    <!-- form card register -->
+    <div class="card card-outline-secondary">
+      <div class="card-header">
+        <h3 class="mb-0">Edit Profile</h3>
+      </div>
+      <div class="card-body">
+        <form [formGroup]="editForm" (ngSubmit)="updateUser([currentUser._id])">
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input class="form-control" id="email" type="email" formControlName="email" required>
+            <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+              <div *ngIf="email.errors.required">E-mail is required.</div>
+              <div *ngIf="email.errors.email">E-mail is invalid.</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="firstNameInput">First Name</label>
+            <input class="form-control" type="text" formControlName="firstName" required>
+            <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)" class="alert alert-danger">
+              <div *ngIf="firstName.errors.required">First name is required.</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="lastNameInput">Last Name</label>
+            <input class="form-control" type="text" formControlName="lastName" required>
+            <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)" class="alert alert-danger">
+              <div *ngIf="lastName.errors.required">Last name is required.</div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="phoneInput">Phone No</label>
+            <input class="form-control" type="text" formControlName="phoneNumber" required>
+            <div *ngIf="phoneNumber.invalid && (phoneNumber.dirty || phoneNumber.touched)" class="alert alert-danger">
+              <div *ngIf="phoneNumber.errors.required">Phone number is required.</div>
+              <div *ngIf="phoneNumber.errors.pattern">Phone number must be numeric only.</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="addressInput">Address</label>
+            <input class="form-control" type="text" formControlName="address">
+          </div>
+          <div class="form-group">
+            <label for="cityInput">City</label>
+            <input class="form-control" type="text" formControlName="city">
+          </div>
+          <div class="form-group">
+            <label for="cityInput">Postal Code</label>
+            <input class="form-control" type="text" formControlName="postalCode">
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input class="form-control" type="password" id="password" formControlName="password"
+              placeholder="Your new password">
+          </div>
+          <div class="form-group">
+            <button class="btn btn-success btn-lg btn-block" type="submit">Update My Information</button>
+          </div>
+        </form>
+        <div class="form-group">
+          <button class="btn btn-danger btn-lg btn-block" type="submit" (click)="removeUser(currentUser._id)">Delete My
+            Profile
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

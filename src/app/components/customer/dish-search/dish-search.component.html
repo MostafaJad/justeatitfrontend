@@ -1,0 +1,32 @@
+<div class="dish-search-container">
+  <div class="row">
+    <div class="col-12">
+      <h1>Choose your next great meal</h1>
+      <div style="margin-bottom: 15px">
+        <label for="dishTypes">Filter by dish type</label>
+        <select name="dishTypes" id="dishTypes" class="custom-select" [(ngModel)]="dishTypeId"
+          (ngModelChange)="dishTypeHandler()">
+          <option value="">SELECT</option>
+          <option [value]="dishType._id" *ngFor="let dishType of dishTypes">{{dishType.typeName.toUpperCase()}}</option>
+        </select>
+      </div>
+
+      <agm-map (boundsChange)="boundsChange($event)" [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">
+        <agm-marker *ngFor="let partner of partners; let i = index" [latitude]="partner.latitude"
+          [longitude]="partner.longitude">
+          <agm-info-window>
+            <h3>{{ partner.companyName }}</h3>
+            <br>
+            <div *ngFor="let dish of partner.dishes">
+              <div *ngFor="let dishAv of dish.dishAvailability">
+                {{ dish.name }}
+              </div>
+              <br>
+            </div>
+            <button (click)="partnerOrder(partner)" class="btn btn-primary">Make Order</button>
+          </agm-info-window>
+        </agm-marker>
+      </agm-map>
+    </div>
+  </div>
+</div>
